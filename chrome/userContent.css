@@ -1,0 +1,61 @@
+/* Customize home / newtab */
+
+@-moz-document url("about:home"), url("about:newtab") {
+
+    /* Change background */
+    body {
+        background-image: url("rain-world.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position-x: center;
+        background-position-y: bottom;
+        background-color: black !important;
+    }
+
+    /* Logo image */
+    .search-wrapper .logo-and-wordmark .logo {
+        display: none !important;
+    }
+
+    /* Logo text */
+    .search-wrapper .logo-and-wordmark .wordmark {
+        background-image: url("rain-world-logo-1whaj.avif") !important;
+        background-size: 30vw !important;
+        height: 25vh !important;
+        width: 30vw !important;
+    }
+
+    /* Searchbar */
+    .search-handoff-button{
+        background-color: transparent !important;
+        backdrop-filter: blur(20px);
+    }
+    
+    .outer-wrapper.only-search {
+        padding-top: 10vh !important;
+    }
+    
+    .search-inner-wrapper {
+        margin-top: 10vh !important;
+    }
+    
+    /* Top site tiles */
+    .top-site-outer, .top-site-icon{
+        background-color: transparent !important;
+    }
+    
+    .top-site-outer:is(.active, :focus, :hover), .tile {
+        background-color: rgba(255,255,255,0.2) !important;
+    }
+    
+    .top-site-outer:is(.active, :focus, :hover) .tile {
+        background-color: transparent !important;
+        box-shadow: none !important;
+    }
+
+    /* Remove setting icon */
+    .icon.icon-settings {
+        display: none !important;
+    }
+}
